@@ -466,3 +466,67 @@ Processing by PostsController#create as HTML
   [1m[36m (48.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.81.218:38893/posts/3
 Completed 302 Found in 61ms (ActiveRecord: 49.7ms)
+
+
+Started GET "/posts/3" for 69.133.193.210 at 2018-02-07 21:32:06 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 69.133.193.210 at 2018-02-07 21:32:09 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/3" for 69.133.193.210 at 2018-02-07 21:32:14 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3/edit" for 69.133.193.210 at 2018-02-07 21:32:19 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3" for 69.133.193.210 at 2018-02-07 21:32:27 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3edit" for 69.133.193.210 at 2018-02-07 21:32:46 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3edit"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3/edit" for 69.133.193.210 at 2018-02-07 21:32:52 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 69.133.193.210 at 2018-02-07 21:32:59 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6oAVRxkK3OAMMnmO3sskqKwvDkzvMR17uJLWQv/D6+5OQwDvc1g1cx4uPSgi3yltLQOGuHvVr8csmCq3jr5www==", "title"=>"Hello!", "description"=>"hello!", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello!"], ["description", "hello!"], ["created_at", "2018-02-07 21:32:59.025797"], ["updated_at", "2018-02-07 21:32:59.025797"]]
+  [1m[35m (19.5ms)[0m  commit transaction
+Redirected to http://165.227.81.218:38893/posts/4
+Completed 302 Found in 23ms (ActiveRecord: 19.9ms)
